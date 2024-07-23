@@ -17,7 +17,17 @@ import { DropdownModule } from 'primeng/dropdown';
   styleUrl: './vitimologia.component.scss'
 })
 export class VitimologiaComponent {
+  
   value: string ='';
+  selectedGender: any;
+  genders: any[] = [
+    { label: 'Masculino', value: 'M' },
+    { label: 'Feminino', value: 'F' }
+  ];
+
+
+  }
+  
 
 
 }

@@ -35,16 +35,16 @@
     margin-bottom: 8px; /* Ajuste conforme necessário */
   }
 
-  .input {
+  .input-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 1cm; /* Ajuste o valor conforme necessário */
+  }
+  
+  .input, .input2, .input3, .input4 {
     margin-bottom: 1cm;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .input2 {
-    margin-bottom: 1cm;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }

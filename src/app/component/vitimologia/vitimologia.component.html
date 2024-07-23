@@ -9,15 +9,33 @@
                   <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
                     <!-- Content here -->
 
-                    <div class="input flex-column align-items-start">
-                        <label for="username" class="p-mb-2">Nome Completo</label>
+
+                    <div class="input-group">
+                        <div class="input flex-column align-items-start">
+                          <label for="username" class="p-mb-2">Nome Completo</label>
+                          <input type="text" pInputText [(ngModel)]="value" />
+                        </div>
+                      
+                        <div class="input3 flex-column align-items-start">
+                          <label for="Genero" class="p-mb-2">Gênero</label>
+                          <p-dropdown 
+                              [(ngModel)]="selectedGender" 
+                              [options]="genders"
+                              placeholder="Masculino">
+                          </p-dropdown>
+                        </div>
+                      </div>
+                      
+                      <div class="input2 flex-column align-items-start">
+                        <label for="RG" class="p-mb-2">RG</label>
                         <input type="text" pInputText [(ngModel)]="value" />
                       </div>
 
-                      <div class="input2 flex-column align-items-start">
-                        <label for="username" class="p-mb-2">RG</label>
-                        <input type="text" pInputText [(ngModel)]="value" />
+                      <div class="input4 flex-column align-items-start">
+                        <label for="date" class="p-mb-2">Data de Nascimento</label>
+                        <p-calendar [(ngModel)]="dateValue" dateFormat="dd/mm/yy"></p-calendar>
                       </div>
+                    </div>
                       
                       
                       
