@@ -1,1 +1,103 @@
-<p>vitimologia works!</p>
+<div class="card-container">
+    <div class="card">
+      <p-card header="Vitimologia" class="card-principal">
+        <div class="card-content">
+          <p-stepper>
+            <p-stepperPanel header="Dados Motorista">
+              <ng-template pTemplate="content" let-nextCallback="nextCallback">
+                <div class="flex flex-column h-12rem">
+                  <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+                    <!-- Content here -->
+
+                    <div class="input flex-column align-items-start">
+                        <label for="username" class="p-mb-2">Nome Completo</label>
+                        <input type="text" pInputText [(ngModel)]="value" />
+                      </div>
+
+                      <div class="input2 flex-column align-items-start">
+                        <label for="username" class="p-mb-2">RG</label>
+                        <input type="text" pInputText [(ngModel)]="value" />
+                      </div>
+                      
+                      
+                      
+
+
+
+
+
+
+
+
+                  </div>
+                </div>
+                <div class="flex pt-4 justify-content-end">
+                  <p-button 
+                    label="Next" 
+                    icon="pi pi-arrow-right" 
+                    iconPos="right" 
+                    (onClick)="nextCallback.emit()" />
+                </div>
+              </ng-template>
+            </p-stepperPanel>
+            <p-stepperPanel header="Endereço">
+              <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback">
+                <div class="flex flex-column h-12rem">
+                  <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+                    Content II
+
+
+
+
+
+
+
+
+                  </div>
+                </div>
+                <div class="flex pt-4 justify-content-between">
+                  <p-button 
+                    label="Back" 
+                    icon="pi pi-arrow-left" 
+                    (onClick)="prevCallback.emit()" />
+                  <p-button 
+                    label="Next" 
+                    icon="pi pi-arrow-right" 
+                    iconPos="right" 
+                    [ngStyle]="{'margin-left': '1rem'}" 
+                    (onClick)="nextCallback.emit()" />
+                </div>
+              </ng-template>
+            </p-stepperPanel>
+            <p-stepperPanel header="Anexos">
+              <ng-template pTemplate="content" let-prevCallback="prevCallback">
+                <div class="flex flex-column h-12rem">
+                  <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+                    Content III
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+                </div>
+                <div class="flex pt-4 justify-content-start"> 
+                    <p-button 
+                    label="Back" 
+                    icon="pi pi-arrow-left" 
+                    (onClick)="prevCallback.emit()" />
+                </div>
+              </ng-template>
+            </p-stepperPanel>
+          </p-stepper>
+        </div>
+      </p-card>
+    </div>
+  </div>
+  
