@@ -11,31 +11,60 @@
 
 
                     <div class="input-group">
-                        <div class="input flex-column align-items-start">
-                          <label for="username" class="p-mb-2">Nome Completo</label>
-                          <input type="text" pInputText [(ngModel)]="value" />
-                        </div>
-                      
-                        <div class="input3 flex-column align-items-start">
-                          <label for="Genero" class="p-mb-2">Gênero</label>
-                          <p-dropdown 
-                              [(ngModel)]="selectedGender" 
-                              [options]="genders"
-                              placeholder="Masculino">
-                          </p-dropdown>
-                        </div>
+                      <div class="input flex-column align-items-start">
+                        <label for="username" class="p-mb-2">Nome Completo</label>
+                        <input type="text" pInputText [(ngModel)]="fullName" />
                       </div>
-                      
-                      <div class="input2 flex-column align-items-start">
-                        <label for="RG" class="p-mb-2">RG</label>
-                        <input type="text" pInputText [(ngModel)]="value" />
+                    
+                      <div class="input3 flex-column align-items-start">
+                        <label for="Genero" class="p-mb-2">Gênero</label>
+                        <p-dropdown 
+                          [(ngModel)]="selectedGender" 
+                          [options]="genders"
+                          placeholder="Masculino">
+                        </p-dropdown>
                       </div>
-
+                    
                       <div class="input4 flex-column align-items-start">
                         <label for="date" class="p-mb-2">Data de Nascimento</label>
-                        <p-calendar [(ngModel)]="dateValue" dateFormat="dd/mm/yy"></p-calendar>
+                        <input type="text" pInputText [(ngModel)]="date" (input)="onDateInput($event)" placeholder="dd/mm/yyyy"/>
+                      </div>
+                    
+                      <div class="input5 flex-column align-items-start">
+                        <label for="cpf" class="p-mb-2">CPF</label>
+                        <input type="text" pInputText [(ngModel)]="cpf" (input)="onCpfInput($event)" placeholder="000.000.000-00"/>
                       </div>
                     </div>
+                    
+                    <div class="input-group flex-row">
+                      <div class="input2 flex-column align-items-start">
+                        <label for="RG" class="p-mb-2">RG</label>
+                        <input type="text" pInputText [(ngModel)]="rg" (input)="onRgInput($event)" placeholder="Apenas números"/>
+                      </div>
+                    
+                      <div class="input6 flex-column align-items-start">
+                        <label for="dataEmissaoRg" class="p-mb-2">Data de Emissão</label>
+                        <input type="text" pInputText [(ngModel)]="dataEmissaoRg" (input)="onDataEmissaoRgInput($event)" placeholder="dd/mm/yyyy"/>
+                      </div>
+                    
+                      <div class="input7 flex-column align-items-start">
+                        <label for="orgaoExp" class="p-mb-2">Órgão Exp.</label>
+                        <input type="text" pInputText [(ngModel)]="orgaoExp" placeholder="Órgão Exp."/>
+                      </div>
+                    </div>
+                    
+                    <div class="input-group">
+                      <div class="input8 flex-column align-items-start">
+                        <label for="controleCliente" class="p-mb-2">Controle do Cliente</label>
+                        <input type="text" pInputText [(ngModel)]="controleCliente" placeholder="Controle do Cliente"/>
+                      </div>
+                    </div>
+                    
+                    
+                  
+                    
+                    
+                      
                       
                       
                       

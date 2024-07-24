@@ -1,50 +1,47 @@
 .card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;  /* Faz o container ocupar toda a largura da tela */
-    padding: 1rem; /* Adiciona um pouco de padding ao redor, se necessário */
-    margin-top: 20px;
-  }
-  
-  .card {
-    width: 70%;  /* Define a largura do card como 70% da largura da tela */
-    max-width: 1200px;  /* Define uma largura máxima para o card */
-    max-height: 600px;  /* Define uma altura máxima para o card */
-    display: flex;
-    flex-direction: column; /* Permite que o card cresça para baixo */
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .card-principal {
-    width: 100%;  /* Faz o card ocupar toda a largura disponível */
-    height: 100%;  /* Faz o card ocupar toda a altura disponível */
-    display: flex;
-    flex-direction: column; /* Permite que o card principal cresça para baixo */
-  }
-  
-  .card-content {
-    flex: 1;  /* Faz o conteúdo do card ocupar o espaço restante */
-    overflow: auto;  /* Adiciona rolagem se o conteúdo for maior que o card */
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;  /* Faz o container ocupar toda a largura da tela */
+  padding: 1rem; /* Adiciona um pouco de padding ao redor, se necessário */
+  margin-top: 20px;
+}
 
-  
-  
-  label {
-    margin-bottom: 8px; /* Ajuste conforme necessário */
-  }
+.card {
+  width: 120%;  /* Define a largura do card como 90% da largura da tela */
+  max-width: 1200px;  /* Define uma largura máxima para o card, se necessário */
+  max-height: 600px;  /* Define uma altura máxima para o card */
+  display: flex;
+  flex-direction: column; /* Permite que o card cresça para baixo */
+  align-items: center;
+  justify-content: center;
+}
 
-  .input-group {
-    display: flex;
-    align-items: flex-start;
-    gap: 1cm; /* Ajuste o valor conforme necessário */
-  }
-  
-  .input, .input2, .input3, .input4 {
-    margin-bottom: 1cm;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.card-principal {
+  width: 100%;  /* Faz o card ocupar toda a largura disponível */
+  height: 100%;  /* Faz o card ocupar toda a altura disponível */
+  display: flex;
+  flex-direction: column; /* Permite que o card principal cresça para baixo */
+}
 
+.card-content {
+  flex: 1;  /* Faz o conteúdo do card ocupar o espaço restante */
+  overflow: auto;  /* Adiciona rolagem se o conteúdo for maior que o card */
+}
+
+label {
+  margin-bottom: 8px; /* Ajuste conforme necessário */
+}
+
+.input-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 1cm; /* Ajuste o valor conforme necessário */
+}
+
+.input, .input2, .input3, .input4, .input5, .input6, .input7, .input8 {
+  margin-bottom: 1cm;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
