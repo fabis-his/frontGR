@@ -1,0 +1,39 @@
+/* Estilizando o container geral */
+.container {
+    max-width: 1000px;
+    min-width: 800px;
+    max-height: 590px;
+    background-color: white;
+    overflow: hidden;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilizando o título principal <h1> */
+.container h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Estilizando o subtítulo <h2> */
+.container h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 2rem 1rem;
+}
+
+/* Estilizando o p-steps */
+p-steps {
+    margin-top: 3rem;
+    .p-steps-item {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #333;
+    }
+}

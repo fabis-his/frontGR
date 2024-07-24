@@ -10,40 +10,28 @@ export class ProductsService {
     return [
 
         {
-            id: '1002',
-            code: 'zz21cz3c1',
-            name: 'Blue Band',
-            description: 'Product Description',
-            image: 'blue-band.jpg',
-            price: 79,
-            category: 'Fitness',
-            quantity: 2,
-            inventoryStatus: 'LOWSTOCK',
-            rating: 3
-        },
-        {
-            id: '1003',
-            code: '244wgerg2',
-            name: 'Blue T-Shirt',
-            description: 'Product Description',
-            image: 'blue-t-shirt.jpg',
-            price: 29,
-            category: 'Clothing',
-            quantity: 25,
-            inventoryStatus: 'INSTOCK',
-            rating: 5
+          id: '1002',
+          motorista: 'Gustavo Bueno Ferreira',
+          cpf: '000.000.000-00',
+          image: 'blue-band.jpg',
+          userSolicitante: 'Nome user solicitante',
+          status: 'Esperando aprovação BRK',
         },
         {
           id: '1002',
-          code: 'zz21cz3c1',
-          name: 'Blue Band',
-          description: 'Product Description',
+          motorista: 'José',
+          cpf: '000.000.000-00',
           image: 'blue-band.jpg',
-          price: 79,
-          category: 'Fitness',
-          quantity: 2,
-          inventoryStatus: 'LOWSTOCK',
-          rating: 3
+          userSolicitante: 'Nome user solicitante',
+          status: 'Em andamento',
+        },
+        {
+          id: '1002',
+          motorista: 'Nome Completo',
+          cpf: '000.000.000-00',
+          image: 'blue-band.jpg',
+          userSolicitante: 'Nome user solicitante',
+          status: 'Em andamento',
       },
     ];
   }
