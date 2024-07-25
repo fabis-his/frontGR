@@ -1,0 +1,243 @@
+<div class="card-container">
+    <div class="card">
+        <p-card header="Vitimologia" class="card-principal">
+            <div class="card-content">
+                <p-stepper>
+                    <p-stepperPanel header="Dados Motorista">
+                        <ng-template pTemplate="content" let-nextCallback="nextCallback">
+                            <div class="flex flex-column">
+                                <div class="form-grid">
+                                    <!-- Conteúdo aqui -->
+
+                                    <div class="p-field">
+                                        <label for="nome">Nome</label>
+                                        <input disabled id="nome" type="text" pInputText />
+                                    </div>
+
+                                    <div class="p-field">
+                                        <label for="genero">Gênero</label>
+                                        <p-dropdown [disabled]="true" id="genero" [options]="genders"
+                                            placeholder="Selecione"></p-dropdown>
+                                    </div>
+
+                                    <div class="p-field">
+                                        <label for="dataNascimento">Data Nascimento</label>
+                                        <p-calendar [disabled]="true" id="dataNascimento"
+                                            dateFormat="dd/mm/yy"></p-calendar>
+                                    </div>
+
+                                    <div class="p-field">
+                                        <label for="cpf">CPF (Motorista)</label>
+                                        <input disabled id="cpf" type="text" pInputText />
+                                    </div>
+
+                                    <div class="p-field">
+                                        <label for="rg">RG</label>
+                                        <input disabled id="rg" type="text" pInputText />
+                                    </div>
+
+                                    <div class="p-field">
+                                        <label for="dataEmissao">Data Emissão</label>
+                                        <p-calendar id="dataEmissao" [disabled]="true"
+                                            dateFormat="dd/mm/yy"></p-calendar>
+                                    </div>
+
+                                    <div class="p-field">
+                                        <label for="orgaoExp">Órgão Exp.</label>
+                                        <input disabled id="orgaoExp" type="text" pInputText />
+                                    </div>
+
+                                    <div class="p-field">
+                                        <label for="controleCliente">Controle do Cliente</label>
+                                        <input disabled id="controleCliente" type="text" pInputText />
+                                    </div>
+
+                                    <div class="p-field">
+                                        <label for="nomePai">Nome do Pai</label>
+                                        <input disabled id="nomePai" type="text" pInputText />
+                                    </div>
+
+                                    <div class="p-field">
+                                        <label for="nomeMae">Nome da Mãe</label>
+                                        <input disabled id="nomeMae" type="text" pInputText />
+                                    </div>
+
+                                    <div class="p-field">
+                                        <label for="funcao">Função</label>
+                                        <p-dropdown [disabled]="true" id="funcao" placeholder="Selecione"
+                                            [options]="gendersFuncao"></p-dropdown>
+                                    </div>
+
+                                    <div class="p-field">
+                                        <label for="perfil">Perfil</label>
+                                        <p-dropdown [disabled]="true" id="perfil" placeholder="Selecione"
+                                            [options]="gendersPerfil"></p-dropdown>
+                                    </div>
+
+                                    <div class="p-field">
+                                        <label for="cnpj">CNPJ (Empresa)</label>
+                                        <input disabled id="cnpj" type="text" pInputText />
+                                    </div>
+
+                                    <div class="p-field">
+                                        <label for="passaporte">Passaporte</label>
+                                        <input disabled id="passaporte" type="text" pInputText />
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div style="margin-top: 20px; margin-bottom: -20px;">
+                                <p-button label="Next" icon="pi pi-arrow-right" iconPos="right"
+                                    (onClick)="nextCallback.emit()" />
+                            </div>
+                        </ng-template>
+                    </p-stepperPanel>
+                    <p-stepperPanel header="Empresa de Vínculo">
+                        <ng-template pTemplate="content" let-prevCallback="prevCallback"
+                            let-nextCallback="nextCallback">
+                            <div class="flex flex-column h-12rem">
+                                <div class="p-field">
+                                    <label for="responsavelFaturamento">Responsável Faturamento</label>
+                                    <p-dropdown [disabled]="true" id="responsavelFaturamento" placeholder="Selecione"
+                                        [options]="gendersResponsavelFaturamento"></p-dropdown>
+                                </div>
+                            </div>
+                            <div style="margin-top: 20px; margin-bottom: -20px;">
+                                <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+                                <p-button label="Next" icon="pi pi-arrow-right" iconPos="right"
+                                    [ngStyle]="{'margin-left': '1rem'}" (onClick)="nextCallback.emit()" />
+                            </div>
+                        </ng-template>
+                    </p-stepperPanel>
+                    <p-stepperPanel header="Endereço">
+                        <ng-template pTemplate="content" let-prevCallback="prevCallback"
+                            let-nextCallback="nextCallback">
+                            <div class="flex flex-column">
+                                <div class="form-grid">
+                                    <div class="p-field">
+                                        <label for="UF">UF</label>
+                                        <p-dropdown [disabled]="true" id="UF" placeholder="Selecione"
+                                            [options]="gendersUF"></p-dropdown>
+                                    </div> 
+                                    <div class="p-field">
+                                        <label for="cidade">Cidade</label>
+                                        <p-dropdown [disabled]="true" id="cidade" placeholder="Selecione"
+                                            [options]="gendersCidade"></p-dropdown>
+                                    </div>         
+                                    
+                                    <div class="p-field">
+                                        <label for="bairro">Bairro</label>
+                                        <input disabled id="bairro" type="text" pInputText />
+                                    </div>
+                                    
+                                    <div class="p-field">
+                                        <label for="logradouro">Logradouro</label>
+                                        <input disabled id="logradouro" type="text" pInputText />
+                                    </div>
+                                    
+                                    <div class="p-field">
+                                        <label for="numero">Número</label>
+                                        <input disabled id="numero" type="text" pInputText />
+                                    </div>
+                                    
+                                    <div class="p-field">
+                                        <label for="complemento">Complemento</label>
+                                        <input disabled id="complemento" type="text" pInputText />
+                                    </div>                      
+                                
+                                </div>
+                            </div>
+                            <div style="margin-top: 20px; margin-bottom: -20px;">
+                                <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+                                <p-button label="Next" icon="pi pi-arrow-right" iconPos="right"
+                                    [ngStyle]="{'margin-left': '1rem'}" (onClick)="nextCallback.emit()" />
+                            </div>
+                        </ng-template>
+                    </p-stepperPanel>
+                    <p-stepperPanel header="Contato">
+                        <ng-template pTemplate="content" let-prevCallback="prevCallback"
+                            let-nextCallback="nextCallback">
+                            <div class="flex flex-column">
+                                <div class="form-grid">                                  
+                                    <div class="p-field">
+                                        <label for="telefone">Telefone</label>
+                                        <input disabled id="telefone" type="text" pInputText />
+                                    </div>       
+                                    <div class="p-field">
+                                        <label for="celular">Celular</label>
+                                        <input disabled id="celular" type="text" pInputText />
+                                    </div>  
+                                    <div class="p-field">
+                                        <label for="telefoneComercial">Telefone Comercial</label>
+                                        <input disabled id="telefoneComercial" type="text" pInputText />
+                                    </div>  
+                                    <div class="p-field">
+                                        <label for="email">E-mail (Opcional)</label>
+                                        <input disabled id="email" type="text" pInputText />
+                                    </div>  
+                                </div>
+                            </div>
+                            <div style="margin-top: 20px; margin-bottom: -20px;">
+                                <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+                                <p-button label="Next" icon="pi pi-arrow-right" iconPos="right"
+                                    [ngStyle]="{'margin-left': '1rem'}" (onClick)="nextCallback.emit()" />
+                            </div>
+                        </ng-template>
+                    </p-stepperPanel>
+                    <p-stepperPanel header="CNH">
+                        <ng-template pTemplate="content" let-prevCallback="prevCallback"
+                            let-nextCallback="nextCallback">
+                            <div class="flex flex-column">
+                                <div class="form-grid">                                  
+                                    <div class="p-field">
+                                        <label for="numeroRegistroCNH">N° Registro</label>
+                                        <input disabled id="numeroRegistroCNH" type="text" pInputText />
+                                    </div>    
+                                    <div class="p-field">
+                                        <label for="numeroCNH">N° CHN</label>
+                                        <input disabled id="numeroCNH" type="text" pInputText />
+                                    </div>          
+                                    <div class="p-field">
+                                        <label for="categoriaCNH">Categoria</label>
+                                        <input disabled id="categoriaCNH" type="text" pInputText />
+                                    </div>  
+                                    
+                                    <div class="p-field">
+                                        <label for="validadeCNH">Validade</label>
+                                        <p-calendar id="validadeCNH" [disabled]="true"
+                                            dateFormat="dd/mm/yy"></p-calendar>
+                                    </div>
+
+                                    <div class="p-field">
+                                        <label for="UFCNH">UF</label>
+                                        <p-dropdown [disabled]="true" id="UFCNH" placeholder="Selecione"
+                                            [options]="gendersUF"></p-dropdown>
+                                    </div> 
+
+                                </div>
+                            </div>
+                            <div style="margin-top: 20px; margin-bottom: -20px;">
+                                <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+                                <p-button label="Next" icon="pi pi-arrow-right" iconPos="right"
+                                    [ngStyle]="{'margin-left': '1rem'}" (onClick)="nextCallback.emit()" />
+                            </div>
+
+                        </ng-template>
+                    </p-stepperPanel>
+                    <p-stepperPanel header="Aprovação">
+                        <ng-template pTemplate="content" let-prevCallback="prevCallback"
+                            let-nextCallback="nextCallback">
+                            <div class="button-container">
+                                <p-button label="Aprovar" [text]="true" [raised]="true" severity="success"></p-button>
+                                <p-button label="Reprovar" [text]="true" [raised]="true" severity="danger"></p-button>
+                              </div>
+                            <div style="margin-top: 20px; margin-bottom: -20px;">
+                                <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+                            </div>
+                        </ng-template>
+                    </p-stepperPanel>
+                </p-stepper>
+            </div>
+        </p-card>
+    </div>
+</div>

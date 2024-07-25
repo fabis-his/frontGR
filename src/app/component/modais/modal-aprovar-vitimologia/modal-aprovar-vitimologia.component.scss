@@ -1,0 +1,47 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+.card {
+    width: 100%;
+    max-width: 1300px; // Ajuste conforme necessário
+}
+
+.card-principal {
+    width: 100%;
+}
+
+.card-content {
+    padding: 0rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // Três colunas
+    gap: 1rem;
+}
+
+.p-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+.p-field label {
+    margin-bottom: 0.5rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; // Espaçamento entre os botões
+    margin-top: 2rem; // Ajuste conforme necessário
+  }
