@@ -1,0 +1,40 @@
+.card {
+    margin: 40px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem 2.5rem; /* Espaço adicional para o ícone */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+    font-size: 0.875rem; /* Tamanho da fonte ajustado */
+  }
+  
+  .search-input::placeholder {
+    color: #888;
+  }
+  
+  .search-input:focus {
+    border-color: #007bff; /* Cor do foco ajustada */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.2); /* Sombra do foco */
+  }
+  
+  /* Estilo do ícone de pesquisa */
+  .p-inputIcon {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .p-iconField {
+    position: relative;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+  }

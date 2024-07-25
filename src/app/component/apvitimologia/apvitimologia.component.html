@@ -1,1 +1,35 @@
-<p>apvitimologia works!</p>
+<div class="card">
+    <h2 style="margin-top: 30px; margin-bottom: 3rem;">Vitimologias pendentes</h2>
+    <p-table #dt2 [value]="products" [tableStyle]="{'min-width': '60rem'}"
+        [globalFilterFields]="['motorista', 'cpf', 'userSolicitante', 'status']">
+        <ng-template pTemplate="caption">
+
+            <div class="flex align-items-center justify-content-between">
+                <p-iconField iconPosition="left" class="ml-auto">
+                    <p-inputIcon>
+                        <i class="pi pi-search"></i>
+                    </p-inputIcon>
+                    <input pInputText type="text" (input)="filterGlobal($event)" placeholder="Filtros"
+                        class="search-input" />
+                </p-iconField>
+            </div>
+
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{product.motorista}}</td>
+                <td>{{product.cpf}}</td>
+                <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image"
+                        [alt]="product.motorista" width="100" class="shadow-4" /></td>
+                <td>{{product.userSolicitante}}</td>
+                <td><p-tag [value]="product.status" [severity]="getSeverity(product.status)" /></td>
+                <td><button pButton (click)="openDialog(product)" type="button" icon="pi pi-eye"></button></td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            <div class="flex align-items-center justify-content-between">
+                Possui {{products ? products.length : 0}} Vitimologias.
+            </div>
+        </ng-template>
+    </p-table>
+</div>
