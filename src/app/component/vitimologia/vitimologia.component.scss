@@ -9,8 +9,8 @@
 
 .card {
   width: 120%;  /* Define a largura do card como 90% da largura da tela */
-  max-width: 1200px;  /* Define uma largura máxima para o card, se necessário */
-  max-height: 600px;  /* Define uma altura máxima para o card */
+  max-width: 1400px;  /* Define uma largura máxima para o card, se necessário */
+  max-height: 950px;  /* Define uma altura máxima para o card */
   display: flex;
   flex-direction: column; /* Permite que o card cresça para baixo */
   align-items: center;
@@ -39,9 +39,30 @@ label {
   gap: 1cm; /* Ajuste o valor conforme necessário */
 }
 
-.input, .input2, .input3, .input4, .input5, .input6, .input7, .input8 {
+.input, .input2, .input3, .input4, .input5, .input6, .input7, .input8, .input9, .input10, .input11, .input12, .input13 {
   margin-bottom: 1cm;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+.input-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Ajuste o espaçamento entre as colunas */
+}
+
+.input-column {
+  flex: 1;
+  min-width: 300px; /* Ajuste a largura mínima para se adequar ao design */
+}
+
+.input {
+  margin-bottom: 1rem; /* Ajuste conforme necessário */
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Ajuste o valor conforme necessário */
+}
+

@@ -1,73 +1,85 @@
 <div class="card-container">
-    <div class="card">
-      <p-card header="Vitimologia" class="card-principal">
-        <div class="card-content">
-          <p-stepper>
-            <p-stepperPanel header="Dados Motorista">
-              <ng-template pTemplate="content" let-nextCallback="nextCallback">
-                <div class="flex flex-column h-12rem">
-                  <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-                    <!-- Content here -->
+
+  <div class="card">
+    <p-card header="Vitimologia" class="card-principal">
+      <div class="card-content">
+        <p-stepper>
+          <p-stepperPanel header="Dados Motorista">
+            <ng-template pTemplate="content" let-nextCallback="nextCallback">
+              <div class="flex flex-column h-12rem">
+                <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+                  <div class="input-columns">
+                    <div class="input-column">
 
 
-                    <div class="input-group">
+
+
+
+
+
+
+
+
                       <div class="input flex-column align-items-start">
                         <label for="username" class="p-mb-2">Nome Completo</label>
-                        <input type="text" pInputText [(ngModel)]="fullName" />
+                        <input type="text" pInputText [(ngModel)]="fullName" style="width: 100%; " />
                       </div>
-                    
-                      <div class="input3 flex-column align-items-start">
-                        <label for="Genero" class="p-mb-2">Gênero</label>
-                        <p-dropdown 
-                          [(ngModel)]="selectedGender" 
-                          [options]="genders"
-                          placeholder="Masculino">
-                        </p-dropdown>
-                      </div>
-                    
-                      <div class="input4 flex-column align-items-start">
-                        <label for="date" class="p-mb-2">Data de Nascimento</label>
-                        <input type="text" pInputText [(ngModel)]="date" (input)="onDateInput($event)" placeholder="dd/mm/yyyy"/>
-                      </div>
-                    
-                      <div class="input5 flex-column align-items-start">
+                      <div class="input flex-column align-items-start">
                         <label for="cpf" class="p-mb-2">CPF</label>
-                        <input type="text" pInputText [(ngModel)]="cpf" (input)="onCpfInput($event)" placeholder="000.000.000-00"/>
+                        <input type="text" pInputText [(ngModel)]="cpf" (input)="onCpfInput($event)" placeholder="   "   />
                       </div>
+                      <div class="input flex-column align-items-start">
+                        <label for="Genero" class="p-mb-2">Gênero</label>
+                        <p-dropdown [(ngModel)]="selectedGender" [options]="genders" placeholder="Selecione"></p-dropdown>
+                      </div>
+                      <div class="input flex-column align-items-start">
+                        <label for="date" class="p-mb-2">Data de Nascimento</label>
+                        <input type="text" pInputText [(ngModel)]="date" (input)="onDateInput($event)" placeholder="   " />
+                      </div>
+
+
+                      <div class="input flex-column align-items-start">
+                        <label for="cnpj" class="p-mb-2">CNPJ</label>
+                        <input type="text" pInputText [(ngModel)]="CNPJ" (input)="onCnpjInput($event)" placeholder="   " />
+                      </div>
+
+
                     </div>
-                    
-                    <div class="input-group flex-row">
-                      <div class="input2 flex-column align-items-start">
+                    <div class="input-column">
+                      <div class="input flex-column align-items-start">
                         <label for="RG" class="p-mb-2">RG</label>
-                        <input type="text" pInputText [(ngModel)]="rg" (input)="onRgInput($event)" placeholder="Apenas números"/>
+                        <input type="text" pInputText [(ngModel)]="rg" (input)="onRgInput($event)" placeholder="   " />
                       </div>
-                    
-                      <div class="input6 flex-column align-items-start">
+                      <div class="input flex-column align-items-start">
                         <label for="dataEmissaoRg" class="p-mb-2">Data de Emissão</label>
-                        <input type="text" pInputText [(ngModel)]="dataEmissaoRg" (input)="onDataEmissaoRgInput($event)" placeholder="dd/mm/yyyy"/>
+                        <input type="text" pInputText [(ngModel)]="dataEmissaoRg" (input)="onDataEmissaoRgInput($event)" placeholder="   " />
                       </div>
-                    
-                      <div class="input7 flex-column align-items-start">
+                      <div class="input flex-column align-items-start">
                         <label for="orgaoExp" class="p-mb-2">Órgão Exp.</label>
-                        <input type="text" pInputText [(ngModel)]="orgaoExp" placeholder="Órgão Exp."/>
+                        <input type="text" pInputText [(ngModel)]="orgaoExp" placeholder="  " />
                       </div>
-                    </div>
-                    
-                    <div class="input-group">
-                      <div class="input8 flex-column align-items-start">
+                      <div class="input flex-column align-items-start">
                         <label for="controleCliente" class="p-mb-2">Controle do Cliente</label>
-                        <input type="text" pInputText [(ngModel)]="controleCliente" placeholder="Controle do Cliente"/>
+                        <input type="text" pInputText [(ngModel)]="controleCliente" placeholder="    " />
                       </div>
                     </div>
-                    
-                    
-                  
-                    
-                    
-                      
-                      
-                      
-                      
+                    <div class="input-column">
+                      <div class="input flex-column align-items-start">
+                        <label for="motherName" class="p-mb-2">Nome da Mãe</label>
+                        <input type="text" pInputText [(ngModel)]="motherName" placeholder="    " />
+                      </div>
+                      <div class="input flex-column align-items-start">
+                        <label for="fatherName" class="p-mb-2">Nome do Pai</label>
+                        <input type="text" pInputText [(ngModel)]="fatherName" placeholder="    " />
+                      </div>
+                      <div class="input flex-column align-items-start">
+                        <label for="Funcao" class="p-mb-2">Função</label>
+                        <p-dropdown [(ngModel)]="selecionefuncao" [options]="funcoes" placeholder="Selecione"></p-dropdown>
+                      </div>
+                      <div class="input flex-column align-items-start">
+                        <label for="Perfil" class="p-mb-2">Perfil</label>
+                        <p-dropdown [(ngModel)]="selecioneperfil" [options]="perfil" placeholder="Selecione"></p-dropdown>
+                      </div>
 
 
 
@@ -76,22 +88,49 @@
 
 
 
+                    </div>
                   </div>
                 </div>
-                <div class="flex pt-4 justify-content-end">
-                  <p-button 
-                    label="Next" 
-                    icon="pi pi-arrow-right" 
-                    iconPos="right" 
-                    (onClick)="nextCallback.emit()" />
+              </div>
+              <div class="flex pt-4 justify-content-end">
+                <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" (onClick)="nextCallback.emit()" />
+              </div>
+            </ng-template>
+          </p-stepperPanel>
+          <p-stepperPanel header="Endereço">
+            <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback">
+              <div class="flex flex-column h-12rem">
+                <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+                  Content II
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
-              </ng-template>
-            </p-stepperPanel>
-            <p-stepperPanel header="Endereço">
-              <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback">
-                <div class="flex flex-column h-12rem">
-                  <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-                    Content II
+              </div>
+              <div class="flex pt-4 justify-content-between">
+                <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+                <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" [ngStyle]="{'margin-left': '1rem'}" (onClick)="nextCallback.emit()" />
+              </div>
+            </ng-template>
+          </p-stepperPanel>
+          <p-stepperPanel header="Anexos">
+            <ng-template pTemplate="content" let-prevCallback="prevCallback">
+              <div class="flex flex-column h-12rem">
+                <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+                  Content III
 
 
 
@@ -100,51 +139,27 @@
 
 
 
-                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
-                <div class="flex pt-4 justify-content-between">
-                  <p-button 
-                    label="Back" 
-                    icon="pi pi-arrow-left" 
-                    (onClick)="prevCallback.emit()" />
-                  <p-button 
-                    label="Next" 
-                    icon="pi pi-arrow-right" 
-                    iconPos="right" 
-                    [ngStyle]="{'margin-left': '1rem'}" 
-                    (onClick)="nextCallback.emit()" />
-                </div>
-              </ng-template>
-            </p-stepperPanel>
-            <p-stepperPanel header="Anexos">
-              <ng-template pTemplate="content" let-prevCallback="prevCallback">
-                <div class="flex flex-column h-12rem">
-                  <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-                    Content III
-
-
-
-
-
-
-
-
-
-
-
-                  </div>
-                </div>
-                <div class="flex pt-4 justify-content-start"> 
-                    <p-button 
-                    label="Back" 
-                    icon="pi pi-arrow-left" 
-                    (onClick)="prevCallback.emit()" />
-                </div>
-              </ng-template>
-            </p-stepperPanel>
-          </p-stepper>
-        </div>
-      </p-card>
-    </div>
+              </div>
+              <div class="flex pt-4 justify-content-start">
+                <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+              </div>
+            </ng-template>
+          </p-stepperPanel>
+        </p-stepper>
+      </div>
+    </p-card>
   </div>
-  
+</div>
